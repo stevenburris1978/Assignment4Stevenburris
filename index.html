@@ -92,14 +92,16 @@
         const upDoc = doc(db, "creek", "Q6UIac3PdyhqgiLWBDB8");
 
         updateDoc(upDoc, {
-            name: "Arkansas Creeks"
+            name: "Silver Bridge Creek",
+            city: "Chester, AR"
+
         })
 
         form.addEventListener(('submit'), (e) => {
             e.preventDefault();
             const docRef = addDoc(collection(db, "creek"), {
-                city: form.city.value,
-                name: form.name.value
+                name: form.name.value,
+                city: form.city.value
             })
         })
     </script>
